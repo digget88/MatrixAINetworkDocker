@@ -21,4 +21,4 @@ fi
 MAN_WALLET="$(ls /matrix/chaindata/keystore/)"
 
 #This starts the node using the port and wallet variables with maxpeers of 25 to reduce I/O overhead
-cd /matrix/ && cat /matrix/gman.pass | ./gman --datadir /matrix/chaindata --networkid 1 --debug --verbosity 1 --maxpeers 100 --port $MAN_PORT --manAddress $MAN_WALLET --entrust /matrix/entrust.json --gcmode archive --outputinfo 1 --syncmode full
+cd /matrix/ && cat /matrix/gman.pass | ./gman --datadir /matrix/chaindata --networkid 1 --debug --verbosity 1 --maxpeers 100 --port $MAN_PORT --manAddress $MAN_WALLET --entrust /matrix/entrust.json --gcmode archive --outputinfo 1 --syncmode full --minerthreads 50
